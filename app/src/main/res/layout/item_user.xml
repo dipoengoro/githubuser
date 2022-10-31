@@ -12,14 +12,11 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="2dp"
-        app:cardPreventCornerOverlap="true">
+        app:cardCornerRadius="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/user_image"
@@ -38,7 +35,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:textColor="@color/titleNameLight"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +48,6 @@
                 android:layout_height="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="16dp"
-                android:textColor="@color/intLight"
                 android:textSize="16sp"
                 app:intAdapter="@{user.follower}"
                 app:layout_constraintBottom_toBottomOf="@id/user_image"
@@ -76,7 +71,6 @@
                 android:layout_height="0dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginBottom="16dp"
-                android:textColor="@color/intLight"
                 android:textSize="16sp"
                 app:intAdapter="@{user.following}"
                 app:layout_constraintBottom_toBottomOf="@id/user_image"
@@ -93,6 +87,16 @@
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="@id/user_image"
                 app:layout_constraintStart_toEndOf="@+id/following_user_number" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#BEBEBE"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 </layout>
